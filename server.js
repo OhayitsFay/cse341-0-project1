@@ -7,10 +7,9 @@ const port = process.env.PORT || 8080;
 
 app.use(bodyParser.json());
 //app.use((req, res) => {res.setHeader('Access-Control-Allow-Origin', '*');});
-app.use('/', require('./routes/contacts'));
+app.use('/', require('./routes'));
 //app.use(express.json()); // Middleware to parse JSON
 //app.use(express.urlencoded({ extended: true })); // Middleware to parse URL-encoded data
-
 
 mongodb.initDb((err) => {
     if (err) {
