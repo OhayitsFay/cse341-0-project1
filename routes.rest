@@ -1,6 +1,17 @@
+// LOCALHOST
+### GET ALL contacts
+GET http://localhost:8080/contacts
+
+### GET contact by ID
+GET http://localhost:8080/contacts/678d67418a5a69de7aa45fa5
+ 
+
+
+//PRODUCTION
 ### GET ALL CONTACTS
 GET https://project1-oidm.onrender.com/contacts
 
 
 ### GET CONTACT BY ID
 GET https://project1-oidm.onrender.com/contacts/678d67418a5a69de7aa45fa5
+
