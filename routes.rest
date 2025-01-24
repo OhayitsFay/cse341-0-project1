@@ -5,7 +5,33 @@ GET http://localhost:8080/contacts
 ### GET contact by ID
 GET http://localhost:8080/contacts/678d67418a5a69de7aa45fa5
  
+### Create contact
+POST http://localhost:8080/contacts HTTP/1.1
+Content-Type: application/json
 
+{
+    "firstName": "Favourite",
+    "lastName": "Atuhu",
+    "email": "fayatuhu@gmail.com",
+    "favoriteColor": "Purple",
+    "birthday": "13-02-2000"
+}
+
+### put contact
+PUT http://localhost:8080/contacts/678d698e8a5a69de7aa45fa7 HTTP/1.1
+Content-Type: application/json 
+
+{
+    "firstName": "Irene",
+    "lastName": "Opeoluwa",
+    "email": "topeirene@gmail.com",
+    "favoriteColor": "Yellow",
+    "birthday": "10-04-1999"
+}
+
+### DELETE contact
+DELETE http://localhost:8080/contacts/6792f92ea8244e8d5c17d150 HTTP/1.1
+Content-Type: application/json
 
 //PRODUCTION
 ### GET ALL CONTACTS

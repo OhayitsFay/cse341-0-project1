@@ -6,7 +6,12 @@ const app = express();
 const port = process.env.PORT || 8080;
 
 app.use(bodyParser.json());
-//app.use((req, res) => {res.setHeader('Access-Control-Allow-Origin', '*');});
+app.use((req, res, next) => {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Z-Key');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+    next();
+});
 app.use('/', require('./routes'));
 //app.use(express.json()); // Middleware to parse JSON
 //app.use(express.urlencoded({ extended: true })); // Middleware to parse URL-encoded data
